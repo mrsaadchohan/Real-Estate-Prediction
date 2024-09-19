@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Price Prediction</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="bgs">
+        <h1 class="text-center">Home Price Prediction</h1>
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="area">Area Square Feet:</label>
+                        <input type="number" class="form-control" id="uiSqft" value="1000">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="bhk">Select BHK:</label>
+                        <select class="form-control" id="bhk">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="bath">Select Bath:</label>
+                        <select class="form-control" id="bath">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="location">Select Location:</label>
+                        <select class="form-control" id="uiLocations">
+                            <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="text-center">
+                <button type="button" class="btn-submit" onclick="onClickedEstimatePrice()">Predict Price</button>
+                <div id="uiEstimatedPrice"><h2></h2></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
